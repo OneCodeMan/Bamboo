@@ -3,14 +3,48 @@
 <html>
 <head>
 	<title>{% block title %}Kado{% endblock %}</title>
-	<link rel="stylesheet" type="text/css" href="{% static 'card/bootstrap.min.css' %}">
-	<link rel="stylesheet" type="text/css" href="{% static 'card/styles.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'card/css/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'card/css/styles.css'  %}">
 	<link rel="icon" 
       type="image/png" 
       href="{% static 'card/img/ace.png' %}">
 </head>
 <body>
+
+<nav class="navbar navbar-light" role="navigation" style="background: #d4e7b8;">
+	<a class="navbar-brand" id="logotitle" href="{% url 'card:deck_list' %}">Bamboo</a>
+
+	<div class="container">
+		<div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1">
+	        <span class="sr-only">Toggle navigation</span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	      </button>
+	    </div>
+
+		<div class="collapse navbar-collapse" id="navbar-collapse-1">
+			<ul class="nav navbar-nav navbar-right">
+				<li>
+					<a class="nav-link" href="#">About</a>
+				</li>
+				<li>
+					<a class="nav-item nav-link" href="#">Sign up</a>
+				</li>
+				<li>
+					<a class="nav-item nav-link" href="#">Log in</a>
+				</li>
+			</ul>
+		</div><!--collapse-->
+	</div><!--container-->
+</nav><!--navbar-->
+
+
 {% block content %}
 {% endblock %}
+
+<script src="{% static 'card/js/jquery.min.js' %}"></script>
+<script src="{% static 'card/js/bootstrap.js' %}"></script>
 </body>
 </html>
