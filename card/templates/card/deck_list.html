@@ -1,0 +1,26 @@
+{% extends 'card/base.html' %}
+{% block title %}Bamboo{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<h1>Your decks</h1>
+
+<ul>
+{% for deck in decks %}
+<li>
+	<a href="{% url 'card:detail' deck=deck.id %}">{{deck.name}}</a>
+	<p class='deck-description'>{{deck.description}}</p>
+</li>
+{% endfor %}
+</ul>
+
+<h3><a href="{% url 'card:deck_new' %}">Add</a></h3>
+<h5 class="logout"><a href="{% url 'card:logout' %}">Log out</a></h5>
+
+{% else %}
+
+{% include 'card/home.html' %}
+
+{% endif %}
+
+{% endblock %}

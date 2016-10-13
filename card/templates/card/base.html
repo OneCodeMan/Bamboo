@@ -1,0 +1,16 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{% block title %}Kado{% endblock %}</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'card/bootstrap.min.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'card/styles.css' %}">
+	<link rel="icon" 
+      type="image/png" 
+      href="{% static 'card/img/ace.png' %}">
+</head>
+<body>
+{% block content %}
+{% endblock %}
+</body>
+</html>

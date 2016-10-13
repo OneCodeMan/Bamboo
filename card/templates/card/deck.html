@@ -1,0 +1,20 @@
+{% extends 'card/base.html' %}
+{% block title %}Decks{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<h1>{{deck.name}}</h1>
+<p>{{deck.description}}</p>
+
+{% for card in deck.card_set.all %}
+<h1>{{card.term}}</h1>
+<p>{{card.definition}}</p>
+<a href="{% url 'card:card_delete' deck=deck.id card=card.id %}">Delete</a>
+{% endfor %}
+
+<h3><a href="{% url 'card:card_new' deck=deck.id %}">Add card</a></h3>
+
+<h3><a href="{% url 'card:deck_edit' deck=deck.id %}">Edit Deck</a></h3>
+<h3><a href="{% url 'card:deck_delete' deck=deck.id %}">Delete Deck</a></h3>
+{% endif %}
+{% endblock %}
