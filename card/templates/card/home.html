@@ -1,3 +1,53 @@
 {% block content %}
+	<div class="jumbotron">
+		<div class="container">
+			<h1 class="appname">Bamboo</h1>
+			<p class="appcatch">Enhance your studying with online flash cards.</p>
+		</div>
+	</div>
 
+	<div class="container features-container">
+		<h1 id="featurestext">Features</h1>
+
+		<div class="row">
+			<div class="col-xs-12 col-sm-4 feature feature-one">
+				<div class="example cardexample">
+					<h2 class="termexample">Term</h2>
+					<p class="lead definitionexample hideexample">This is the definition for the term.</p>
+				</div><!--example-->
+
+				<p class="lead explanation">Make term-definition paired cards with the option to hide either one of them.</p>
+			</div><!--feature-->
+
+			<div class="col-xs-12 col-sm-4 feature feature-two">
+
+				<div class="example quizexample">
+					<h4 class="quizexamplename">Math quiz</h4>
+					<h2 class="questionexample">1. What is 2+2?</h2>
+					<p class="lead answerexample hideexample">4</p>
+
+					<h2 class="questionexample">2. What is 5*5?</h2>
+					<p class="lead answerexample hideexample">25</p>
+				</div><!--example-->
+
+				<p class="lead explanation">Create your own quizzes.</p>
+			</div><!--feature-->
+
+			<div class="col-xs-12 col-sm-4 feature feature-three">
+				<div class="example deckexample">
+					<h2 class="deckexampletitle">
+						My Decks
+					</h2><!--h2-->
+					<ul class="listexample">
+						<li style="color: darkgreen;">Biology: Cells</li>
+						<li style="color: darkgreen;">Biology: Evolution</li>
+						<li style="color: royalblue">Chemistry: Organic Chemistry</li>
+					</ul>
+				</div><!--example-->
+
+				<p class="lead explanation">Organize your cards into neatly placed decks. </p>
+			</div><!--feature-->
+		</div><!--row-->
+
+	</div><!--container-->
 {% endblock %}

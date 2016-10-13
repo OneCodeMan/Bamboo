@@ -5,14 +5,15 @@
 	<title>{% block title %}Kado{% endblock %}</title>
 	<link rel="stylesheet" type="text/css" href="{% static 'card/css/bootstrap.min.css' %}">
 	<link rel="stylesheet" type="text/css" href="{% static 'card/css/styles.css'  %}">
+	<link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
 	<link rel="icon" 
       type="image/png" 
       href="{% static 'card/img/ace.png' %}">
 </head>
 <body>
 
-<nav class="navbar navbar-light" role="navigation" style="background: #d4e7b8;">
-	<a class="navbar-brand" id="logotitle" href="{% url 'card:deck_list' %}">Bamboo</a>
+<nav class="navbar navbar-light bg-faded" role="navigation" style="background: #d4e7b8;">
+	<a class="navbar-brand appname" href="{% url 'card:deck_list' %}">Bamboo</a>
 
 	<div class="container">
 		<div class="navbar-header">
@@ -26,14 +27,14 @@
 
 		<div class="collapse navbar-collapse" id="navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
-				<li>
+				<li class="nav-item">
 					<a class="nav-link" href="#">About</a>
 				</li>
-				<li>
-					<a class="nav-item nav-link" href="#">Sign up</a>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Sign up</a>
 				</li>
-				<li>
-					<a class="nav-item nav-link" href="#">Log in</a>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Log in</a>
 				</li>
 			</ul>
 		</div><!--collapse-->

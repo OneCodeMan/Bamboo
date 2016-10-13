@@ -1,7 +1,64 @@
-.icon-bar { background-color: white !important; }
+/* hamburger menu */
+.icon-bar { background-color: #87421F !important; }
 
-a {
+/* remove default link settings */
+a, a:link, a:visited, a:hover {
 	text-decoration: none;
 	color: black;
 	font-weight: bold;
+	color: #87421F;
+}
+
+.nav-link {
+	font-size: 15px;
+}
+
+* {
+	font-family: 'Bitter', serif;
+}
+/* this is how to have no space between navbar and jumbotron */
+.navbar, .jumbotron { margin-bottom: 0; }
+
+
+.jumbotron {
+	text-align: center;
+	background: #fdf5ef;
+}
+
+.appname { color: #87421F !important; }
+.appcatch { color: #855E42; font-weight: 500 !important; }
+
+
+/* features */
+#featurestext { text-align: center; }
+
+.features-container { padding: 20px; }
+
+.explanation { font-weight: bold; }
+
+/* features */
+
+.example {
+	border: solid;
+	padding: 22px;
+	overflow: hidden;
+	border-radius: 20px;
+	height: 230px;
+	color: black;
+}
+
+.cardexample, .quizexamplename, .deckexampletitle {
+	text-align: center;
+}
+
+.hideexample { background: black; }
+
+.hideexample:hover { background: white; }
+
+.questionexample { font-size: 15px; }
+
+.listexample {
+	color: RoyalBlue;
+	font-weight: bold;
+	font-size: 17px;
 }
