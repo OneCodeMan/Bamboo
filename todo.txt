@@ -1,0 +1,18 @@
+TODOS
+-----
+Easy
+- Make about page
+- Register form (form validation)
+Around here, ask SO/ r/django how you'd use AJAX
+to call to db to check for existing users
+- Sign in form (form validation)
+- New deck form
+- New card form
+- List of decks
+- List of cards 
+- Error page(s)
+
+Medium
+- Implement quiz maker
+- Make forms better (i.e. extend amount of cards/decks user can make)
+- Filter the queries. Don't have endless scrolling

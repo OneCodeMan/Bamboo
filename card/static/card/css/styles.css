@@ -4,9 +4,9 @@
 /* remove default link settings */
 a, a:link, a:visited, a:hover {
 	text-decoration: none;
-	color: black;
+	color: #855E42;
 	font-weight: bold;
-	color: #87421F;
+	font-size: 19px;
 }
 
 .nav-link {
@@ -26,13 +26,19 @@ a, a:link, a:visited, a:hover {
 }
 
 .appname { color: #87421F !important; }
-.appcatch { color: #855E42; font-weight: 500 !important; }
 
+.appcatch {
+	 color: #855E42;
+	 font-weight: 500 !important;
+ }
 
 /* features */
 #featurestext { text-align: center; }
 
-.features-container { padding: 20px; }
+.features-container { 
+	padding: 20px;
+	background: #fdfdfd; 
+}
 
 .explanation { font-weight: bold; }
 
@@ -44,14 +50,14 @@ a, a:link, a:visited, a:hover {
 	overflow: hidden;
 	border-radius: 20px;
 	height: 230px;
-	color: black;
+	color: #2A363B;
+	box-shadow: 10px 4px 5px #888888;
+	background: #fdfdfd;
 }
 
-.cardexample, .quizexamplename, .deckexampletitle {
-	text-align: center;
-}
+.cardexample, .quizexamplename, .deckexampletitle { text-align: center; }
 
-.hideexample { background: black; }
+.hideexample { background: #2A363B; }
 
 .hideexample:hover { background: white; }
 
