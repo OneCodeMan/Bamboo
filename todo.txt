@@ -1,7 +1,6 @@
 TODOS
 -----
 Easy
-- Make about page
 - Register form (form validation)
 Around here, ask SO/ r/django how you'd use AJAX
 to call to db to check for existing users

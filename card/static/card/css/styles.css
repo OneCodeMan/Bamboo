@@ -1,10 +1,14 @@
+* {
+	font-family: 'Bitter', serif;
+}
+
 /* hamburger menu */
 .icon-bar { background-color: #87421F !important; }
 
 /* remove default link settings */
 a, a:link, a:visited, a:hover {
 	text-decoration: none;
-	color: #855E42;
+	color: #87421F;
 	font-weight: bold;
 	font-size: 19px;
 }
@@ -13,9 +17,6 @@ a, a:link, a:visited, a:hover {
 	font-size: 15px;
 }
 
-* {
-	font-family: 'Bitter', serif;
-}
 /* this is how to have no space between navbar and jumbotron */
 .navbar, .jumbotron { margin-bottom: 0; }
 
@@ -59,7 +60,7 @@ a, a:link, a:visited, a:hover {
 
 .hideexample { background: #2A363B; }
 
-.hideexample:hover { background: white; }
+.hideexample:hover { background: #fdfdfd; }
 
 .questionexample { font-size: 15px; }
 
@@ -67,4 +68,16 @@ a, a:link, a:visited, a:hover {
 	color: RoyalBlue;
 	font-weight: bold;
 	font-size: 17px;
+}
+
+/* About */
+.abouttitle {
+	color: #87421F;
+	text-align: center;
+	font-family: 'Bitter', serif;
+}
+
+.aboutcontainer {
+	color: #855E42;
+	background: #fdfdfd; 
 }

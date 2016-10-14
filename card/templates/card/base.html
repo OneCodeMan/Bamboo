@@ -28,19 +28,24 @@
 		<div class="collapse navbar-collapse" id="navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
 				<li class="nav-item">
-					<a class="nav-link" href="#">About</a>
+					<a class="nav-link" href="{%  url 'card:about' %}">About</a>
 				</li>
+				{% if not user.is_authenticated %}
 				<li class="nav-item">
 					<a class="nav-link" href="{% url 'card:register' %}">Sign up</a>
 				</li>
 				<li class="nav-item">
 					<a class="nav-link" href="{% url 'card:login' %}">Log in</a>
 				</li>
+				{% else %}
+				<li class="nav-item">
+					<a class="nav-link" href="{% url 'card:logout' %}">Log out</a>
+				</li>
+				{% endif %}
 			</ul>
 		</div><!--collapse-->
 	</div><!--container-->
 </nav><!--navbar-->
-
 
 {% block content %}
 {% endblock %}

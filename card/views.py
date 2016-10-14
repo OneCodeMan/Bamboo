@@ -17,6 +17,11 @@ class IndexView(generic.ListView):
 			return Deck.objects.filter(owner=self.request.user)
 		else:
 			return None
+
+# about page
+class AboutView(TemplateView):
+	template_name = 'card/about.html'
+
 # deck stuff
 class DeckView(DetailView):
 	model = Deck

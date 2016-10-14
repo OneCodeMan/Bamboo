@@ -14,6 +14,7 @@ urlpatterns = [
 	url(r'^deck/(?P<deck>[0-9]+)/card/(?P<card>[0-9]+)/$', views.card_delete, name='card_delete'),
 
 	url(r'^register/$', views.UserFormView.as_view(), name='register'),
+	url(r'^about/$', views.AboutView.as_view(), name='about'),
 	url(r'^login/$', views.LoginView.as_view(), name='login'),
 	url(r'^logout/$', views.LogoutView.as_view(), name='logout'),
 ]
