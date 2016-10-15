@@ -1,22 +1,20 @@
 TODOS
 -----
+
+Do
+- Implement quiz maker
+- Filter the queries. Don't have endless scrolling
+- Form validation (user exists)
+- Error page(s)
+
+IMPROVEMENTS
+
 Deck list
 - Add search feature
 - Limit number of decks shown
 
 Card list
-- List of cards
-- Option to hide/unhide terms/definition
 - Option to shuffle 
-
-Stuff
-- Card list
-- New deck form
-- New card form
-- Implement quiz maker
-- Filter the queries. Don't have endless scrolling
-- Form validation (user exists)
-- Error page(s)
 
 Medium
 - Make forms better (i.e. extend amount of cards/decks user can make)

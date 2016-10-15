@@ -1,10 +1,23 @@
 {% extends 'card/base.html' %}
+{% load bootstrap3 %}
 {% block title %}Add Deck{% endblock %}
 
 {% block content %}
-	<h1>New card</h1>
-	<form method="POST" class="post-form">{% csrf_token %}
-		{{ form.as_p }}
-		<button type="submit" class="save btn btn-default">Save</button>
-	</form>
+	{% if user.is_authenticated %}
+	<div class="container-fluid newcardformcontainer">
+		<div class="row">
+			<div class="col-md-offset-2 col-sm-offset-1 col-sm-8 formcol cardformdiv">
+				<h1 class="title cardformtitle">New card</h1>
+				<form method="POST" class="post-form">
+					{% csrf_token %}
+					{% bootstrap_form form %}
+
+					{% buttons %}
+					<button type="submit" class="save btn btn-default btn-lg cardformbutton center-block">Add</button>
+					{% endbuttons %}
+				</form>
+			</div><!--col-->
+		</div><!--row-->
+	</div><!--container-->
+	{% endif %}
 {% endblock %}

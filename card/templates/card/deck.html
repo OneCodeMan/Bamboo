@@ -16,6 +16,7 @@
 
 <div class="container-fluid listcontainer cardscontainer">
 
+	{% if deck.card_set.all %}
 	<div class="hideoptions">
 		<p id="hideterms">hide terms</p>
 		<p id="hidedefinitions">hide definitions</p>
@@ -34,6 +35,11 @@
 			</div><!--row-->
 		</div><!--cards-->
 	</div><!--row-->
+
+	{% else %}
+
+	<p class="lead nocontent">You don't have any cards in this deck!</p>
+	{% endif %}
 </div><!--container-fluid-->
 
 
