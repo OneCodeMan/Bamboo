@@ -23,7 +23,7 @@ $hidequiz.on('click', function() {
 // randomize greet
 $greet = $("#greet");
 $compliment = $("#compliment");
-greetings = ["Hello", "Hi", "Welcome"];
+greetings = ["Hello", "Hi", "Welcome", "Yo"];
 compliments = ["Nice to see you again!", "Have a great time studying!", "We hope you have a great time studying :)"];
 rand_greet = Math.floor(Math.random() * greetings.length);
 rand_compliment = Math.floor(Math.random() * compliments.length);

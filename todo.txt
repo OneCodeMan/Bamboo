@@ -1,8 +1,16 @@
 TODOS
 -----
-Easy
-- List of decks
-- List of cards 
+Deck list
+- Add search feature
+- Limit number of decks shown
+
+Card list
+- List of cards
+- Option to hide/unhide terms/definition
+- Option to shuffle 
+
+Stuff
+- Card list
 - New deck form
 - New card form
 - Form validation (user exists)
