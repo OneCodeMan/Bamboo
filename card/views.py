@@ -6,6 +6,7 @@ from .forms import DeckForm, CardForm, SignUpForm, LogInForm
 from django.contrib.auth.models import User 
 from django.contrib.auth import authenticate, login, logout
 from django.views.generic import View, TemplateView
+from django.contrib.auth.models import User
 
 # list of decks
 class IndexView(generic.ListView):
@@ -109,6 +110,15 @@ class UserFormView(View):
 					pass
 			else:
 				pass
+
+def check_username(request):
+	username = request.GET.get('username', None)
+	data = {
+		'is_taken': User.objects.filter(username=username).exists()
+	}
+	if data['is_taken']:
+		data['error_message'] = "Already exists"
+	return JsonResponse(data)
 
 class LoginView(View):
 	form_class = LogInForm 

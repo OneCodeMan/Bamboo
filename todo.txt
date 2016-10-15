@@ -1,11 +1,11 @@
 TODOS
 -----
 Easy
-- Form validation (user exists)
-- New deck form
-- New card form
 - List of decks
 - List of cards 
+- New deck form
+- New card form
+- Form validation (user exists)
 - Error page(s)
 
 Medium
