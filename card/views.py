@@ -112,13 +112,11 @@ class UserFormView(View):
 				pass
 
 def check_username(request):
-	username = request.GET.get('username', None)
-	data = {
-		'is_taken': User.objects.filter(username=username).exists()
-	}
-	if data['is_taken']:
-		data['error_message'] = "Already exists"
-	return JsonResponse(data)
+	if not request.GET.get('username'):
+		return render(request, '404.html', {'message': _('You shall not pass')}, status=405)
+	if User.objects.filter(username=request.GET.get('username').encode('utf-8')).count():
+		return HttpResponse('user exists', content_type="text/plain")
+	return HttpResponse("good user", content_type='text/plain')
 
 class LoginView(View):
 	form_class = LogInForm 

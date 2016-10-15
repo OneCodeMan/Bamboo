@@ -10,6 +10,7 @@
 		<div class="col-md-offset-2 col-sm-offset-1 col-sm-8 userformdiv">
 			<h1 class="title userformtitle">Sign up</h1>
 			<form method="POST" class="post-form">
+				<p id="id_username_chcker"></p>
 				{% csrf_token %}
 				{% bootstrap_form form %}
 
