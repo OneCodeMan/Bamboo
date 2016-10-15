@@ -9,7 +9,7 @@
 		<h1 id="welcomemessage"><span id="greet">Hello</span> {{user.first_name}},</h1>
 		<p class="lead" id="compliment">We hope you have a great time studying :)</p>
 		<a href="{% url 'card:deck_new' %}"><button type="button" class="btn btn-lg btn-default">Create new deck</button></a>
-		<a href="#"><button type="button" class="btn btn-lg btn-default">Create new quiz</button></a>
+		<a href="#"><button type="button" class="btn btn-lg btn-default disabled">Create new quiz</button></a>
 	</div><!--container-->
 </div><!--jumbotron-->
 
@@ -40,20 +40,7 @@
 <div class="container-fluid quizlistcontainer">
 	<h2 class="decklisttitle">Quizzes</h2>
 
-	<p id="hidequiz">hide quizzes</p>
-
-	<div class="row">
-		<div class="col-md-offset-2 col-sm-offset-1 decks">
-			<div class="row quizrow">
-				{% for deck in decks %}
-					<div class="col-xs-12 col-sm-3 single singlequiz">
-						<p class="deckname"><a href="{% url 'card:detail' deck=deck.id %}">{{deck.name}}</a><p>
-						<p class='deck-description'>{{deck.description}}</p>
-					</div><!--col-->
-				{% endfor %}
-			</div><!--row-->
-		</div><!--col-->
-	</div><!--row-->
+	<p>Coming soon!</p>
 
 </div><!--container-->
 
