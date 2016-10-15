@@ -2,19 +2,40 @@
 {% block title %}Decks{% endblock %}
 
 {% block content %}
+
 {% if user.is_authenticated %}
-<h1>{{deck.name}}</h1>
-<p>{{deck.description}}</p>
+<div class="jumbotron">
+	<div class="container deckjumbo">
+		<h2 class="deckname">{{deck.name}}</h2>
+		<p class="deckdescription">{{deck.description}}</p>
+		<a href="{% url 'card:card_new' deck=deck.id %}"><button type="button" class="btn btn-lg btn-default">Add card</button></a>
+		<a href="{% url 'card:deck_edit' deck=deck.id %}"><button type="button" class="btn btn-lg btn-default">Edit Deck</button></a>
+		<a href="{% url 'card:deck_delete' deck=deck.id %}"><button type="button" class="btn btn-lg btn-default">Delete deck</button></a>
+	</div><!--container-->
+</div><!--jumbotron-->
 
-{% for card in deck.card_set.all %}
-<h1>{{card.term}}</h1>
-<p>{{card.definition}}</p>
-<a href="{% url 'card:card_delete' deck=deck.id card=card.id %}">Delete</a>
-{% endfor %}
+<div class="container-fluid listcontainer cardscontainer">
 
-<h3><a href="{% url 'card:card_new' deck=deck.id %}">Add card</a></h3>
+	<div class="hideoptions">
+		<p id="hideterms">hide terms</p>
+		<p id="hidedefinitions">hide definitions</p>
+	</div><!--hide-->
 
-<h3><a href="{% url 'card:deck_edit' deck=deck.id %}">Edit Deck</a></h3>
-<h3><a href="{% url 'card:deck_delete' deck=deck.id %}">Delete Deck</a></h3>
+	<div class="row cardrow">
+		<div class="col-md-offset-2 col-sm-offset-1 listcol cards">
+			<div class="row">
+				{% for card in deck.card_set.all %}
+				<div class="col-xs-12 col-sm-3 single singlecard">
+					<h3 class="cardterm">{{card.term}}</h3>
+					<p class="cardefinition">{{card.definition}}</p>
+					<a href="{% url 'card:card_delete' deck=deck.id card=card.id %}">Delete</a>
+				</div><!--singlecard-->
+				{% endfor %}
+			</div><!--row-->
+		</div><!--cards-->
+	</div><!--row-->
+</div><!--container-fluid-->
+
+
 {% endif %}
 {% endblock %}

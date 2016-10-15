@@ -30,3 +30,19 @@ rand_compliment = Math.floor(Math.random() * compliments.length);
 
 $greet.text(greetings[rand_greet]);
 $compliment.text(compliments[rand_compliment])
+
+
+$hideterms = $("#hideterms");
+$hidedefinitions = $("#hidedefinitions");
+$cardterm = $(".cardterm");
+$carddefinition = $(".cardefinition");
+
+$hideterms.on('click', function() {
+	$cardterm.toggleClass("blacken");
+	$(this).toggleText('hide terms', 'show terms');
+})
+
+$hidedefinitions.on('click', function() {
+	$carddefinition.toggleClass("blacken");
+	$(this).toggleText('hide definitions', 'show definitions');
+})

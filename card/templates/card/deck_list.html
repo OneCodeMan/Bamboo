@@ -13,15 +13,15 @@
 	</div><!--container-->
 </div><!--jumbotron-->
 
-<div class="container-fluid decklistcontainer">
+<div class="container-fluid listcontainer decklistcontainer">
 	<h2 class="decklisttitle">Decks</h2>
 	<p id="hidedeck">hide decks</p>
 
 	<div class="row deckrow">
-		<div class="col-md-offset-2 col-sm-offset-1 decks">
+		<div class="col-md-offset-2 col-sm-offset-1 listcol decks">
 			<div class="row">
 				{% for deck in decks %}
-					<div class="col-xs-12 col-sm-3 singledeck">
+					<div class="col-xs-12 col-sm-3 single singledeck">
 						<p class="deckname"><a href="{% url 'card:detail' deck=deck.id %}">{{deck.name}}</a><p>
 						<p class='deck-description'>{{deck.description}}</p>
 					</div><!--col-->
@@ -40,7 +40,7 @@
 		<div class="col-md-offset-2 col-sm-offset-1 decks">
 			<div class="row quizrow">
 				{% for deck in decks %}
-					<div class="col-xs-12 col-sm-3 singledeck">
+					<div class="col-xs-12 col-sm-3 single singlequiz">
 						<p class="deckname"><a href="{% url 'card:detail' deck=deck.id %}">{{deck.name}}</a><p>
 						<p class='deck-description'>{{deck.description}}</p>
 					</div><!--col-->

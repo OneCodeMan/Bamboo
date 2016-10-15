@@ -13,10 +13,10 @@ Stuff
 - Card list
 - New deck form
 - New card form
+- Implement quiz maker
+- Filter the queries. Don't have endless scrolling
 - Form validation (user exists)
 - Error page(s)
 
 Medium
-- Implement quiz maker
 - Make forms better (i.e. extend amount of cards/decks user can make)
-- Filter the queries. Don't have endless scrolling
