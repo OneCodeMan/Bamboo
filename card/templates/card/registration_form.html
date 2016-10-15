@@ -5,9 +5,9 @@
 
 {% block content %}
 {% if not user.is_authenticated %}
-<div class="container-fluid userformcontainer">
+<div class="container-fluid formcontainerdiv userformcontainer">
 	<div class="row">
-		<div class="col-md-offset-2 col-sm-offset-1 col-sm-8 userformdiv">
+		<div class="col-md-offset-2 col-sm-offset-1 col-sm-8 formcol userformdiv">
 			<h1 class="title userformtitle">Sign up</h1>
 			<form method="POST" class="post-form">
 				<p id="id_username_chcker"></p>
