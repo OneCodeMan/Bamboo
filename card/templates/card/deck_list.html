@@ -1,21 +1,74 @@
 {% extends 'card/base.html' %}
 {% block title %}Bamboo{% endblock %}
+{% load bootstrap3 %}
 
 {% block content %}
 {% if user.is_authenticated %}
-<h1>Your decks</h1>
+<div class="jumbotron">
+	<div class="container">
+		<h1 id="welcomemessage"><span id="greet">Hello</span> {{user.first_name}},</h1>
+		<p class="lead" id="compliment">We hope you have a great time studying :)</p>
+		<a href="{% url 'card:deck_new' %}"><button type="button" class="btn btn-lg btn-default">Create new deck</button></a>
+		<a href="#"><button type="button" class="btn btn-lg btn-default">Create new quiz</button></a>
+	</div><!--container-->
+</div><!--jumbotron-->
 
-<ul>
-{% for deck in decks %}
-<li>
-	<a href="{% url 'card:detail' deck=deck.id %}">{{deck.name}}</a>
-	<p class='deck-description'>{{deck.description}}</p>
-</li>
-{% endfor %}
-</ul>
+<div class="container-fluid decklistcontainer">
+	<h2 class="decklisttitle">Decks</h2>
+	<p id="hidedeck">hide decks</p>
 
-<h3><a href="{% url 'card:deck_new' %}">Add</a></h3>
-<h5 class="logout"><a href="{% url 'card:logout' %}">Log out</a></h5>
+	<div class="row deckrow">
+		<div class="col-md-offset-2 col-sm-offset-1 decks">
+			<div class="row">
+				{% for deck in decks %}
+					<div class="col-xs-12 col-sm-3 singledeck">
+						<p class="deckname"><a href="{% url 'card:detail' deck=deck.id %}">{{deck.name}}</a><p>
+						<p class='deck-description'>{{deck.description}}</p>
+					</div><!--col-->
+				{% endfor %}
+			</div><!--row-->
+		</div><!--col-->
+	</div><!--row-->
+
+</div><!--container-->
+
+<div class="container-fluid quizlistcontainer">
+	<h2 class="decklisttitle">Quizzes</h2>
+	<p id="hidequiz">hide quizzes</p>
+
+	<div class="row">
+		<div class="col-md-offset-2 col-sm-offset-1 decks">
+			<div class="row quizrow">
+				{% for deck in decks %}
+					<div class="col-xs-12 col-sm-3 singledeck">
+						<p class="deckname"><a href="{% url 'card:detail' deck=deck.id %}">{{deck.name}}</a><p>
+						<p class='deck-description'>{{deck.description}}</p>
+					</div><!--col-->
+				{% endfor %}
+			</div><!--row-->
+		</div><!--col-->
+	</div><!--row-->
+
+</div><!--container-->
+
+<div class="container-fluid emptyspace">
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 {% else %}
 

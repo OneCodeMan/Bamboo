@@ -103,3 +103,48 @@ label { font-size: 20px; }
 	height: 100%;
 	padding: 10px;
 }
+
+/* lists */
+
+.decklistcontainer, .quizlistcontainer { text-align: center; }
+
+/* Deck list */
+#welcomemessage {
+	color: #855E42;
+}
+
+.decklistcontainer { background: #fdfdfd; }
+
+.decklisttitle {
+	color: #87421F;
+}
+
+.decks { display: flex; }
+
+.singledeck {
+	border: solid;
+	padding: 15px;
+	margin: 10px;
+	border-radius: 20px;
+	height: 200px;
+	overflow: hidden;
+	text-align: center;
+	background: #fdfdfd; 
+	box-shadow: 5px 3px 5px #888888;
+}
+
+
+#hidedeck, #hidequiz { 
+	font-size: 15px;
+	cursor: pointer;
+}
+
+/* quiz list */
+.quizlistcontainer {
+	background: #fdf5ef;
+}
+
+.emptyspace {
+	background: #fdf5ef;
+	height: 100px;
+}
