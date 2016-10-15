@@ -17,6 +17,12 @@ a, a:link, a:visited, a:hover {
 	font-size: 15px;
 }
 
+.title {
+	color: #87421F;
+	text-align: center;
+	font-family: 'Bitter', serif;
+}
+
 /* this is how to have no space between navbar and jumbotron */
 .navbar, .jumbotron { margin-bottom: 0; }
 
@@ -71,13 +77,29 @@ a, a:link, a:visited, a:hover {
 }
 
 /* About */
-.abouttitle {
-	color: #87421F;
-	text-align: center;
-	font-family: 'Bitter', serif;
-}
 
 .aboutcontainer {
 	color: #855E42;
 	background: #fdfdfd; 
+}
+
+/* Register */
+
+label { font-size: 20px; }
+
+.userformdiv {
+	border: solid #855E42;
+	margin-top: 5px;
+	padding: 20px;
+	border-radius: 10px;
+	color: #855E42; 
+	box-shadow: 10px 4px 5px #888888;
+	background: #fdfdfd;
+}
+
+.userformcontainer {
+	background: #fdf5ef;
+	min-height: 100%;
+	height: 100%;
+	padding: 10px;
 }

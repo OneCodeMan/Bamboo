@@ -1,10 +1,7 @@
 TODOS
 -----
 Easy
-- Register form (form validation)
-Around here, ask SO/ r/django how you'd use AJAX
-to call to db to check for existing users
-- Sign in form (form validation)
+- Form validation (user exists)
 - New deck form
 - New card form
 - List of decks
