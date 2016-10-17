@@ -119,8 +119,6 @@ label { font-size: 20px; }
 	color: #87421F;
 }
 
-.listcol{ display: flex; }
-
 .single {
 	border: solid;
 	padding: 15px;
