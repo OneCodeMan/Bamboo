@@ -21,14 +21,14 @@
 
 	<div class="row deckrow">
 		<div class="col-md-offset-2 col-sm-offset-1 listcol decks">
-			<div class="row">
+
 				{% for deck in decks %}
 					<div class="col-xs-12 col-sm-3 single singledeck">
 						<p class="deckname"><a href="{% url 'card:detail' deck=deck.id %}">{{deck.name}}</a><p>
 						<p class='deck-description'>{{deck.description}}</p>
 					</div><!--col-->
 				{% endfor %}
-			</div><!--row-->
+
 		</div><!--col-->
 	</div><!--row-->
 	{% else %}
